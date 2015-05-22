@@ -63,20 +63,20 @@ void middleStudent::getCourse(int index)
 
 int main()
 {
-    Student *ps;
-    //s.setStudent(1, "wang", '0', 177);
+    Student *p;
+    
+    Student *ps = new Student;
+    ps->setStudent(1, "wang", '0', 177);
 
     middleStudent *pstu = new middleStudent;
     pstu->setStudent(2, "liqingfang", '0', 180, 200, "北京市");
+    
+    p = ps;
+    p->getStudent(1);
+    p = pstu;
+    p->getStudent(2);
 
-    //Student *pstu = &s;
-    //pstu->getStudent(1);
-
-    pstu->getStudent(2);
-    pstu->getCourse(2);
-    ps = pstu;
-    ps->getCourse(2);
-
+    delete ps;
     delete pstu;
 
     return 0;
