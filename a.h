@@ -18,7 +18,6 @@ class Student
         ~Student();
         inline void setStudent(int index, string name, char sex, int height);
         inline virtual void getStudent(int index);
-        virtual void getCourse(int index);
 };
 
 class middleStudent : public Student
